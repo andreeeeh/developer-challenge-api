@@ -31,8 +31,7 @@ Depending the role please complete one of the following
 Create a web application which runs in the browser and satisfies the following requirements:
 
 - Connects with the API using js / jquery
-- The use of Bootstrap 3/4 for page elements
-- The use of a CSS pre-processing tool like SCSS/LESS
+- The use of a CSS pre-processing tool like SCSS/LESS or CSS in JS
 - Semantic, accessible markup
 - SEO friendly urls, titles, metadata
 
@@ -63,12 +62,12 @@ You are more than welcome to use the following starting points.
 ##### Requirements
 
 - Two or more distinct components demonstrating component hierarchy
-- At least one custom hook to communicate with the REST API
+- At least one service to communicate with the REST API (can be done using a context, hooks, services)
   - Take a look at the API section [API Section](#API)
 - At least one unit test per component
   - you can use [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - The use of a CSS pre-processing tool
-  - SCSS/LESS/cssinjs like (Emotion/styledComponents)
+  - SCSS/LESS/CSSinJS like (Emotion/styledComponents/Vanilla Extract)
 - Consideration of semantic markup, SEO and accessibility
 
 _OR_
