@@ -47,7 +47,7 @@ Create an Angular 2+ application which runs in the browser and satisfies the fol
 - The use of a CSS pre-processing tool like SCSS/LESS
 - Consideration of semantic markup, SEO and accessibility
 
-Think carefully when introducing third party libraries, Angular as a framework has everything you need to accomplish the challenge so only do it if you really must, for example, adding additional functionality.
+Think carefully when introducing third party libraries (including Angular Material), the Angular framework has everything you need to accomplish the challenge so only do it if you really must, for example, adding additional functionality.
 
 _OR_
 
@@ -71,6 +71,7 @@ You are more than welcome to use the following starting points.
 - The use of a CSS pre-processing tool
   - SCSS/LESS/CSSinJS like (Emotion/styledComponents/Vanilla Extract)
 - Consideration of semantic markup, SEO and accessibility
+- Avoid using css libraries
 
 _OR_
 
