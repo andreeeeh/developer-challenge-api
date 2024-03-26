@@ -1,0 +1,13 @@
+<header class="header">
+    <h1>Developer Challenge: My Blog</h1>
+</header>
+<main class="main">
+    <section>
+        @for (post of posts; track post) {
+       <app-post-structure [post]="post"/>
+        }
+    </section>
+</main>
+<footer>
+    <p>footer</p>
+</footer>

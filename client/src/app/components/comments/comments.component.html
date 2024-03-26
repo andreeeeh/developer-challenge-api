@@ -1,0 +1,4 @@
+<app-add-comment [postId]="postId" (addCommentEvent)="addComment($event)" />
+@for(comment of comments; track comment.id) {
+<app-comment-structure [comment]="comment"/>
+}
