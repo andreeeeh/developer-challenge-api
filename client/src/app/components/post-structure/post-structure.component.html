@@ -2,7 +2,7 @@
   <h2 class="title">{{ post.title }}</h2>
   <time class="date">{{ post.publish_date | date: 'mediumDate' }}</time>
   <h3 class="author">Written by: {{ post.author }}</h3>
-  <div class="description">Description: {{ post.description }}</div>
+  <div class="description">{{ post.description }}</div>
   @if (router.url === '/') {
     <div
       class="content"
