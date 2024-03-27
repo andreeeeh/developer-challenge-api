@@ -1,0 +1,12 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.comment-structure {
+    @include space-around-styles;
+    background-color: $background-color;
+}
+
+.content {
+    margin-left: 3px;
+    text-align: justify;
+}

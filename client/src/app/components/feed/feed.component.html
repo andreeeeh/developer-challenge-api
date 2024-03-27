@@ -1,13 +1,13 @@
-<header class="header">
-    <h1>Developer Challenge: My Blog</h1>
-</header>
 <main class="main">
-    <section>
-        @for (post of posts; track post) {
-       <app-post-structure [post]="post"/>
-        }
-    </section>
+  <section>
+    @for (post of posts; track post.id) {
+      <app-post-structure
+        class="post"
+        [post]="post"
+        [routerLink]="['/post', post.id, post.slug]" />
+    }
+  </section>
 </main>
-<footer>
-    <p>footer</p>
+<footer class="footer">
+  <p>© Footer Copyright</p>
 </footer>

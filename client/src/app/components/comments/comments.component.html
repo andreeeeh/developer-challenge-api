@@ -1,4 +1,8 @@
 <app-add-comment [postId]="postId" (addCommentEvent)="addComment($event)" />
-@for(comment of comments; track comment.id) {
-<app-comment-structure [comment]="comment"/>
+@if (comments) {
+  @for (comment of comments; track comment.id) {
+    <app-comment-structure [comment]="comment" />
+  }
+} @else {
+  <p class="add-comment">Be the first to comment!</p>
 }

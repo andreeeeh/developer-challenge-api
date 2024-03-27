@@ -1,8 +1,10 @@
-@if(post){
-<section>
-    <app-post-structure [post]="post" />
-</section>
-<section>
-    <app-comments [postId]="postId" />
-</section>
-}
+<main>
+  @if (post) {
+    <section>
+      <app-post-structure [post]="post" />
+    </section>
+    <section>
+      <app-comments [postId]="postId" />
+    </section>
+  }
+</main>

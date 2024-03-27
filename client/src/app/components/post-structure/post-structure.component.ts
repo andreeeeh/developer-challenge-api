@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Post } from '../../interfaces/post';
 
 @Component({
@@ -9,4 +10,6 @@ import { Post } from '../../interfaces/post';
 export class PostStructureComponent {
   @Input()
   post!: Post
+
+  constructor(public router: Router) { }
 }

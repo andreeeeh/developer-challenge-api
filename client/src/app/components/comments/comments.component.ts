@@ -8,11 +8,11 @@ import { Comment } from '../../interfaces/comment';
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.scss'
 })
-export class CommentsComponent {
+export class CommentsComponent implements OnInit {
 
   @Input()
   postId!: number
-  
+
   comments!: Comment[]
 
   constructor(private commentService: CommentService) { }

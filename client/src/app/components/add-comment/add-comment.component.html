@@ -1,17 +1,16 @@
-<form name="commentForm" [formGroup]="commentForm" (ngSubmit)="handleSubmitComment()">
-    <div>Add a comment:</div>
+<form class="comment-form" name="commentForm" [formGroup]="commentForm" (ngSubmit)="handleSubmitComment()">
 
     <label for="user">Username: </label>
-    <input type="text" id="user" formControlName="user" required />
+    <input class="username-box" type="text" id="user" formControlName="user" required />
     @if(commentForm.controls['user'].invalid && commentForm.controls['user'].touched){
     <div>Username is required</div>
     }
 
     <label for="content">Comment: </label>
-    <textarea id="content" formControlName="content"></textarea>
+    <textarea class="comment-box" id="content" formControlName="content"></textarea>
     @if(commentForm.controls['content'].invalid && commentForm.controls['content'].touched){
     <div>Your comment should have at least 5 characters!</div>
     }
 
-    <button type="submit" [disabled]="!commentForm.valid">Submit</button>
+    <button class="comment-button" type="submit" [disabled]="!commentForm.valid">Submit</button>
 </form>

@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: $dark-blue-color;
+    padding: 15px;
+    font-size: small;
+    color: $font-color;
+}
+
+.home-button {
+    width: 25px;
+    height: 25px;
+    color: $font-color;
+    cursor: pointer;
+}

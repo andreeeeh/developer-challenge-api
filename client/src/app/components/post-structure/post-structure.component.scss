@@ -1,10 +1,23 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
 .post-structure {
-    padding: 15px;
-    cursor: pointer;
+    @include space-around-styles;
+    background-color: $background-color;
 }
 
 .date,
 .author {
     display: flex;
     justify-content: right;
+}
+
+.description,
+.content {
+    text-align: justify;
+
+    ::ng-deep span {
+        color: $dark-blue-color;
+        font-weight: 800;
+    }
 }

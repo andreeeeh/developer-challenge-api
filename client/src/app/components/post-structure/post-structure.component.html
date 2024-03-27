@@ -1,7 +1,15 @@
-<article class="post-structure" [routerLink]="['/post', post.id, post.slug]">
-    <h2 class="title">{{post.title}}</h2>
-    <time class="date">{{post.publish_date | date: 'mediumDate'}}</time>
-    <h3 class="author">Written by: {{post.author}}</h3>
-    <div class="description">Description: {{post.description}}</div>
+<article class="post-structure">
+  <h2 class="title">{{ post.title }}</h2>
+  <time class="date">{{ post.publish_date | date: 'mediumDate' }}</time>
+  <h3 class="author">Written by: {{ post.author }}</h3>
+  <div class="description">Description: {{ post.description }}</div>
+  @if (router.url === '/') {
+    <div
+      class="content"
+      [innerHTML]="
+        post.content.slice(0, 180) + '<span>  ...Read more.</span>'
+      "></div>
+  } @else {
     <div class="content" [innerHTML]="post.content"></div>
+  }
 </article>

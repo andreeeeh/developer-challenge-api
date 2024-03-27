@@ -1,12 +1,25 @@
-.header {
-    background-color: #027990;
-    padding: 15px;
-    font-size: small;
-    color: white;
-    text-align: right;
+@import '../../../styles/variables.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main {
-    padding: 20px;
-    background-color: #fafafa;
+    flex: 1 0 auto;
+    padding: 10px;
+}
+
+.post {
+    cursor: pointer;
+}
+
+.footer {
+    background-color: $dark-blue-color;
+    color: $font-color;
+    text-align: center;
+    padding: 5px;
+    height: 20px;
+    width: 100%;
 }

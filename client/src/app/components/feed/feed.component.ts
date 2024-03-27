@@ -10,7 +10,7 @@ import { Post } from '../../interfaces/post';
   styleUrl: './feed.component.scss',
   standalone: false,
 })
-export class FeedComponent {
+export class FeedComponent implements OnInit {
   posts!: Post[];
 
   constructor(
@@ -23,8 +23,9 @@ export class FeedComponent {
     this.postService.getPosts()
       .subscribe(data => { this.posts = data })
     this.title.setTitle('My Blog: Home')
-    this.meta.updateTag(
-      { name: 'description', content: 'This is the timeline of My Blog' }
+    this.meta.removeTag("name='author'");
+    this.meta.removeTag("name='publish date'");
+    this.meta.updateTag({ name: 'description', content: 'This is the timeline of My Blog' }
     )
   }
 

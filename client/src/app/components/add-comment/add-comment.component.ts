@@ -9,7 +9,7 @@ import { Comment } from '../../interfaces/comment';
   templateUrl: './add-comment.component.html',
   styleUrl: './add-comment.component.scss'
 })
-export class AddCommentComponent {
+export class AddCommentComponent implements OnInit {
   @Input()
   postId!: number
   @Output() addCommentEvent = new EventEmitter<Comment>()
@@ -34,7 +34,10 @@ export class AddCommentComponent {
 
   handleSubmitComment() {
     this.commentService.addComment(this.commentForm.value)
-      .subscribe(data => this.addCommentEvent.emit(data))
+      .subscribe(data => {
+        this.addCommentEvent.emit(data)
+        this.commentForm.reset()
+      })
   }
 
 }

@@ -13,6 +13,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { AddCommentComponent } from './components/add-comment/add-comment.component';
 import { CommentStructureComponent } from './components/comment-structure/comment-structure.component';
 import { PostStructureComponent } from './components/post-structure/post-structure.component';
+import { NavComponent } from './components/nav/nav.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PostStructureComponent } from './components/post-structure/post-structu
     CommentsComponent,
     CommentStructureComponent,
     AddCommentComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

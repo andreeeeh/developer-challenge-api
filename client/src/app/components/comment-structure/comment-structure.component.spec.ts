@@ -14,6 +14,14 @@ describe('CommentStructureComponent', () => {
 
     fixture = TestBed.createComponent(CommentStructureComponent);
     component = fixture.componentInstance;
+    component.comment = {
+      id: 0,
+      postId: 0,
+      parent_id: 0,
+      user: "test user",
+      date: "2024-01-01",
+      content: "test content"
+    },
     fixture.detectChanges();
   });
 

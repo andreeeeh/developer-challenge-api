@@ -1,0 +1,17 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.comment-form {
+    @include space-around-styles;
+    display: flex;
+    flex-direction: column;
+}
+
+.username-box,
+.comment-box {
+   @include box-styles
+}
+
+.comment-button {
+    @include button-styles
+}

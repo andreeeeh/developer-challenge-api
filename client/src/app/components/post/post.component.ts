@@ -10,7 +10,7 @@ import { Post } from '../../interfaces/post';
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss'
 })
-export class PostComponent {
+export class PostComponent implements OnInit {
 
   @Input()
   set id(value: number) {
@@ -31,7 +31,9 @@ export class PostComponent {
       .subscribe(data => {
         this.post = data
         this.title.setTitle(`My Blog: ${this.post.title}`)
-        this.meta.updateTag({name: 'description', content: this.post.description})
+        this.meta.updateTag({ name: 'description', content: `This post is about: ${this.post.description}` })
+        this.meta.addTags([{ name: 'author', content: `Written by: ${this.post.author}` },
+        { name: 'publish date', content: `${this.post.publish_date}` }])
       })
   }
 }
